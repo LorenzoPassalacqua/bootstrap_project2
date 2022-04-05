@@ -88,6 +88,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Necron</h5>
                             <p class="card-text">The Necrons are a mysterious xenos species of humanoid, robotic skeletal warriors that have lain dormant in their stasis-tombs for more than 60 million Terran years, though they have begun to awaken at last.</p>
+                            <button type="button" class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Monolith" data-bs-trigger="focus" data-bs-content="Nothing is so emblematic of Necron implacability as the Monolith. Like all Necron constructs, it is composed of living metal, a complex semi-sentient alloy that ripples and flows to repair damage in a blink of an eye.">
+                                Special unit
+                              </button>
                         </div>
                 </div>
         </div>
@@ -99,6 +102,9 @@
                     <div class="card-body">
                             <h5 class="card-title">T'au</h5>
                             <p class="card-text">The T'au (Imperial binomial classification: Tau tau), also spelled Tau in older records and pronounced "TOW," are a young, humanoid and technologically-advanced intelligent species native to the Eastern Fringes of the Milky Way Galaxy.</p>
+                            <button type="button" class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Hammerhead" data-bs-trigger="focus" data-bs-content="Like a hungry predator on the prowl, the Hammerhead Gunship is a menacing sight. It skims over a planet's surface with its massive turret-mounted gun swivelling back and forth to track potential targets before unleashing a devastating salvo to destroy them utterly.">
+                                Special unit
+                              </button>
                     </div>
             </div>
         </div>    
@@ -112,6 +118,9 @@
                         <div class="card-body">
                                 <h5 class="card-title">Imperial Guard</h5>
                                 <p class="card-text">The Astra Militarum, also known as the Imperial Guard in colloquial Low Gothic, is the largest coherent fighting force in the galaxy. They serve as the Imperium of Man's primary combat force and first line of defence from the myriad threats which endanger the existence of the Human race in the 41st Millennium.</p>
+                                <button type="button" class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Baneblade"  data-bs-trigger="focus" data-bs-content=" single super-heavy tank is a dominant presence in an Astra Militarum battle line. As it ploughs inexorably forward it lays down a wide path of destruction. Enemy ranks shatter long before it reaches their position, and those unlucky few who are able to maintain their defensive formations are ground to paste under the slab-like plates of its tracks.">
+                                    Special unit
+                                  </button>
                         </div>
             </div>
        </div> 
@@ -147,7 +156,17 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+})
 
 
+        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+        trigger: 'focus'
+})
+    </script>
   </body>
 </html>
